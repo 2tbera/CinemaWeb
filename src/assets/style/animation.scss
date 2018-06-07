@@ -1,0 +1,106 @@
+@keyframes fade-in-b-t {
+  from {
+    //-webkit-transform: scale(0.5);
+    //-moz-transform: scale(0.5);
+    //-ms-transform: scale(0.5);
+    //-o-transform: scale(0.5);
+    //transform: scale(0.5);
+    margin-top: 100%;
+    opacity: .5;
+  }
+
+  to {
+    //-webkit-transform: scale(1);
+    //-moz-transform: scale(1);
+    //-ms-transform: scale(1);
+    //-o-transform: scale(1);
+    //transform: scale(1);
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+@keyframes fade-out-t-b {
+  from {
+    //-webkit-transform: scale(0.5);
+    //-moz-transform: scale(0.5);
+    //-ms-transform: scale(0.5);
+    //-o-transform: scale(0.5);
+    //transform: scale(0.5);
+    margin-top: 0;
+    opacity: 1;
+  }
+
+  to {
+    //-webkit-transform: scale(1);
+    //-moz-transform: scale(1);
+    //-ms-transform: scale(1);
+    //-o-transform: scale(1);
+    //transform: scale(1);
+    margin-top: -100%;
+    opacity: .5;
+  }
+}
+
+
+@-webkit-keyframes pulse-shadow--collection {
+  0% {
+    -webkit-box-shadow: 0 0 rgba(238, 105, 128, 1);
+    box-shadow: 0 0 rgba(238, 105, 128, 1)
+  }
+  80% {
+    -webkit-box-shadow: 0 0 5px 10px rgba(238, 105, 128, 0);
+    box-shadow: 0 0 5px 10px rgba(238, 105, 128, 0)
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(238, 105, 128, 0);
+    box-shadow: 0 0 0 0 rgba(238, 105, 128, 0)
+  }
+}
+
+@keyframes pulse-shadow--collection {
+  0% {
+    -webkit-box-shadow: 0 0 rgba(238, 105, 128, .9);
+    box-shadow: 0 0 rgba(238, 105, 128, .9)
+  }
+  80% {
+    -webkit-box-shadow: 0 0 5px 10px rgba(238, 105, 128, 0);
+    box-shadow: 0 0 5px 10px rgba(238, 105, 128, 0)
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(238, 105, 128, 0);
+    box-shadow: 0 0 0 0 rgba(238, 105, 128, 0)
+  }
+}
+
+
+@-webkit-keyframes pulse-shadow--collection--parple {
+  0% {
+    -webkit-box-shadow: 0 0 #3E4580;
+    box-shadow: 0 0 #3E4580
+  }
+  80% {
+    -webkit-box-shadow: 0 0 5px 10px rgba(238, 105, 128, 0);
+    box-shadow: 0 0 5px 10px rgba(238, 105, 128, 0)
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(238, 105, 128, 0);
+    box-shadow: 0 0 0 0 rgba(238, 105, 128, 0)
+  }
+}
+
+@keyframes pulse-shadow--collection--parple {
+  0% {
+    -webkit-box-shadow: 0 0 #3E4580;
+    box-shadow: 0 0 #363c71;
+  }
+  80% {
+    -webkit-box-shadow: 0 0 5px 10px rgba(238, 105, 128, 0);
+    box-shadow: 0 0 5px 10px rgba(238, 105, 128, 0)
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(238, 105, 128, 0);
+    box-shadow: 0 0 0 0 rgba(238, 105, 128, 0)
+  }
+}
+
+

@@ -1,0 +1,18 @@
+$all: (
+  xs : "0px",
+  sm : "1100px",
+  md : "1600px",
+  lg : "1920px"
+);
+$col-number: 12;
+$width: 100/$col-number;
+@each $size, $break-point in $all {
+  @media screen and (min-width: #{$break-point}) {
+    @for $i from 1 through $col-number {
+      .col_#{$size}_#{$i} {
+        width: $width*$i*1%;
+        flex: 0 0 $width*$i*1%;
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+<div #cursor class="cursor" onclick="cursorClick()"></div>
+<div #cursorFollower class="cursor-follower"></div>
+
+<div class="header dp-f dp-f-c-sp-b" [class.active]="scroll">
+  <div class="logo btn">
+    <a class="a a-block full" routerLink="/home">
+
+    </a>
+  </div>
+  <ul class="list list-header dp-f">
+    <li class="list-header__item btn">
+      <a class="a a-block" routerLink="/home">
+        <span i18n="site header manu | manu item main page ">
+        MAIN PAGE
+        </span>
+      </a>
+    </li>
+    <li class="list-header__item btn">
+      <span i18n="site header manu | manu item new showing">
+        NEW SHOWING
+      </span>
+    </li>
+    <li class="list-header__item btn">
+      <span i18n="site header manu | manu item coming soon ">
+        COMING SOON
+      </span>
+    </li>
+    <li class="list-header__item btn">
+      <span i18n="site header manu | manu item top movies">
+        TOP MOVIES
+      </span>
+    </li>
+    <li class="list-header__item btn">
+      <a class="a a-block" routerLink="/contact">
+      <span i18n="site header manu | manu item contact">
+        CONTACT
+      </span>
+      </a>
+    </li>
+  </ul>
+  <button class="lg-nav__button btn relative">
+    ENG
+    <ul class="list lg-nav">
+      <li class="lg-nav__item btn">
+        <span i18n="site header lg nav| lg nav item geo">
+          GEO
+        </span>
+      </li>
+      <li class="lg-nav__item btn">
+        <span i18n="site header lg nav| lg nav item geo">
+          ENG
+        </span>
+      </li>
+    </ul>
+  </button>
+  <div class="user btn"></div>
+</div>
+
+
+

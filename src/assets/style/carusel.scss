@@ -1,0 +1,100 @@
+
+.carusel {
+  overflow: hidden;
+  //live
+  & > .carusel--live {
+    .carusel {
+      &-arrow {
+        background: $f-c-pink;
+        position: absolute;
+        z-index: 10;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        animation: pulse-shadow--collection 1s infinite;
+        &-left {
+          left: -35px;
+        }
+        &-right {
+          right: -35px;
+        }
+      }
+
+      &__wrapper {
+        width: 100%;
+        @include display-flex(center, space-between);
+        position: relative;
+        margin-left: -16.66666667%;
+        &::before {
+          content: '';
+          flex: 0 0 16.66666667%;
+          height: 10px;
+          display: block;
+        }
+        &.wrapperLeft {
+          transition: 0.3s ease all;
+          margin-left: -16.66666667% *2;
+        }
+        &.wrapperRight {
+          transition: 0.3s ease all;
+          margin-left: 0;
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  //live END
+  //comming soon
+  & > .carusel--comingSoon {
+    .carusel {
+      &-arrow {
+        background: $f-c-pink;
+        position: absolute;
+        z-index: 10;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        animation: pulse-shadow--collection 1s infinite;
+        &-left {
+          left: -45px;
+        }
+        &-right {
+          right: -45px;
+        }
+      }
+
+      &__wrapper {
+        width: 100%;
+        @include display-flex(center, flex-start);
+        position: relative;
+        margin-left: -16.66666667%;
+        &::before {
+          content: '';
+          flex: 0 0 16.66666667%;
+          height: 200px;
+          display: block;
+        }
+        &.wrapperLeft {
+          transition: 0.3s ease all;
+          margin-left: -16.66666667% *2;
+        }
+        &.wrapperRight {
+          transition: 0.3s ease all;
+          margin-left: 0;
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  //comming soon END
+}

@@ -1,0 +1,12 @@
+<div class="col_lg_12 col_md_12 col_xs_12 col_sm_12 carusel relative ">
+  <div [class]="classNames">
+    <button class="btn carusel-arrow-left carusel-arrow eff" (click)="carouselLeft()"></button>
+    <button class="btn carusel-arrow-right carusel-arrow eff" (click)="carouselRight()"></button>
+    <div #holder [class.wrapperLeft]="wrapperLeft" [class.wrapperRight]="wrapperRight"
+         class="carusel__wrapper dp-f dp-f-s-s">
+      <div *ngFor="let carousel of this.item; let  i = index" class="col_lg_2 col_md_2 br-l-r-w">
+        <item [modifier]="modifierItem" [item]="carousel"></item>
+      </div>
+    </div>
+  </div>
+</div>

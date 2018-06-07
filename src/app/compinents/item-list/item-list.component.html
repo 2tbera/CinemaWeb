@@ -1,0 +1,32 @@
+<div class="container ">
+  <div class="row dp-f-s-s">
+    <div class=" filter col_md_12 col_xs_12 col_sm_12 col_lg_12 spacer-b-30 br-b-w">
+      <div class="col_lg_12 col_sm_12 col_xs_12 col_md_12 spacer-b-20 dp-f-s-s dp-f">
+        <div class="filter__item f-g-s">
+          DATE
+        </div>
+        <div class="filter__item f-g-s">
+          CINEMA
+        </div>
+        <div class="filter__item f-g-s">
+          TIME
+        </div>
+      </div>
+      <div class="col_lg_12 col_sm_12 col_xs_12 col_md_12 dp-f-s-s dp-f ">
+        <drop-down [itemDrop]="data.dateList" [type]="'date'" (modelChange)=" modelChange($event) "></drop-down>
+        <drop-down [itemDrop]="data.dropItemCinema" [type]="'cinema'" (modelChange)=" modelChange($event) "></drop-down>
+        <drop-down [itemDrop]="data.timeList" [type]="'time'" (modelChange)=" modelChange($event) "></drop-down>
+      </div>
+    </div>
+
+    <ng-container *ngIf="data.item.length > 0">
+      <ng-container *ngFor="let item of data.item">
+        <div class="eff-p relative dp-f dp-f-c-c item--move-holder br-w col_lg_3 col_md_# col_sm_3 col_xs_3">
+          <a routerLink="/detail/{{item.id}}">
+          <item [modifier]="['move']" [item]="item.movie"></item>
+          </a>
+        </div>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

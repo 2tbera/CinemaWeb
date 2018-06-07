@@ -1,0 +1,311 @@
+.container-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@mixin display-flex($align , $justify) {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: $align;
+  -moz-justify-content: $justify;
+  -webkit-justify-content: $justify;
+  -ms-justify-content: $justify;
+  justify-content: $justify;
+}
+
+.a {
+  &-block {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+
+  }
+}
+
+.full {
+  height: 100%;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.dp-f {
+  display: flex;
+  &-c {
+    &-c {
+      align-items: center;
+      justify-content: center;
+    }
+    &-s {
+      align-items: center;
+      justify-content: flex-start;
+    }
+    &-e {
+      align-items: center;
+      justify-content: flex-end;
+    }
+    &-sp-b {
+      align-items: center;
+      justify-content: space-between;
+    }
+    &-sp-a {
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+
+  &-e {
+    &-c {
+      align-items: flex-end;
+      justify-content: center;
+    }
+    &-s {
+      align-items: flex-end;
+      justify-content: flex-start;
+    }
+    &-e {
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+    &-sp-b {
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+    &-sp-a {
+      align-items: flex-end;
+      justify-content: space-around;
+    }
+  }
+
+  &-s {
+    &-c {
+      align-items: flex-start;
+      justify-content: center;
+    }
+    &-s {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    &-e {
+      align-items: flex-start;
+      justify-content: flex-end;
+    }
+    &-sp-b {
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    &-sp-a {
+      align-items: flex-start;
+      justify-content: space-around;
+    }
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.f-g-s {
+  flex: 0 0 50%;
+
+}
+
+.btn {
+  //cursor: pointer;
+  box-sizing: border-box;
+  outline: none;
+  border: 0;
+  position: relative;
+  background: none;
+}
+
+.spacer-b-10 {
+  margin-bottom: 10px;
+}
+
+.spacer-b-20 {
+  margin-bottom: 20px;
+}
+
+.spacer-b-30 {
+  margin-bottom: 30px;
+}
+
+.spacer-b-40 {
+  margin-bottom: 40px;
+}
+
+.spacer-b-50 {
+  margin-bottom: 50px;
+}
+
+.spacer-b-60 {
+  margin-bottom: 60px;
+}
+
+.spacer-b-5 {
+  margin-bottom: 5px;
+}
+
+.spacer-l-10 {
+  margin-left: 10px;
+}
+
+.spacer-l-20 {
+  margin-left: 20px;
+}
+
+.spacer-l-30 {
+  margin-left: 30px;
+}
+
+.spacer-l-40 {
+  margin-left: 40px;
+}
+
+.spacer-l-50 {
+  margin-left: 50px;
+}
+
+.spacer-l-60 {
+  margin-left: 60px;
+}
+
+.spacer-l-5 {
+  margin-left: 5px;
+}
+
+.spacer-r-10 {
+  margin-right: 10px;
+}
+
+.spacer-r-20 {
+  margin-right: 20px;
+}
+
+.spacer-l-30 {
+  margin-right: 30px;
+}
+
+.spacer-r-40 {
+  margin-right: 40px;
+}
+
+.spacer-r-50 {
+  margin-right: 50px;
+}
+
+.spacer-r-60 {
+  margin-right: 60px;
+}
+
+.spacer-r-5 {
+  margin-right: 5px;
+}
+
+.spacer-t-5 {
+  margin-top: 5px;
+}
+
+.spacer-t-10 {
+  margin-top: 10px;
+}
+
+.spacer-t-20 {
+  margin-top: 20px;
+}
+
+.spacer-t-30 {
+  margin-top: 30px;
+}
+
+.spacer-t-40 {
+  margin-top: 40px;
+}
+
+.spacer-t-50 {
+  margin-top: 50px;
+}
+
+.spacer-t-60 {
+  margin-top: 60px;
+}
+
+.spacer-t-5 {
+  margin-top: 5px;
+}
+
+.spacer-10 {
+  margin: 10px;
+}
+
+.spacer-20 {
+  margin: 20px;
+}
+
+.spacer-30 {
+  margin: 30px;
+}
+
+.spacer-40 {
+  margin: 40px;
+}
+
+.spacer-50 {
+  margin: 50px;
+}
+
+.spacer-60 {
+  margin: 60px;
+}
+.p-15{
+  padding: 15px 15px;
+}
+
+.br-w {
+  box-sizing: border-box;
+  border: 0.5px rgba(255, 255, 255, 0.1) solid;
+}
+
+.br-l-r-w {
+  box-sizing: border-box;
+  border-left: 0.5px rgba(255, 255, 255, 0.1) solid;
+  border-right: 0.5px rgba(255, 255, 255, 0.1) solid;
+}
+
+.br-b-w {
+  box-sizing: border-box;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+}
+
+.br-t-w {
+  box-sizing: border-box;
+  border-top: solid 1px rgba(255, 255, 255, 0.1);
+}

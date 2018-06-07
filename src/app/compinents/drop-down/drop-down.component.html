@@ -1,0 +1,14 @@
+<div class="filter__item eff-p br-w relative" [class.active]="drop">
+  <div class="btn full p-15" (click)="dropEv()">
+    <ng-container *ngFor="let item of itemDrop"  >
+      <ng-container *ngIf="item.active">
+        {{item.name}}
+      </ng-container>
+    </ng-container>
+  </div>
+  <ul class="list drop-filter" [class.active]="drop">
+    <ng-container *ngFor="let item of itemDrop ; let i = index"  >
+      <li class="drop-filter__item br-w btn" [class.active]="item.active" (click)="dropClick(i, item)">{{item.name}}</li>
+    </ng-container>
+  </ul>
+</div>

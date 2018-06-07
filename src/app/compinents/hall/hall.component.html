@@ -1,0 +1,38 @@
+<div class="dp-f dp-f-s-s f-g-s">
+  <table class="hall__row hall__row--left col_xs_1 col_lg_1 col_sm_1 col_md_1">
+    <tr class="hall__tr " *ngFor="let row of hall.row">
+      <th class="hall__th relative">
+        {{row}}
+      </th>
+    </tr>
+  </table>
+  <table class="hall col_xs_10 col_lg_10 col_sm_10 col_md_10 f-g-s">
+    <tr class="hall__tr " *ngFor="let row of hall.row">
+      <ng-container *ngFor="let seat of hall.hall[0][row] ">
+        <th class="hall__th relative" (click)="order(seat)" [class.avalable]="seat.status === 'avalable'"
+            [class.blocked]="seat.status === 'blocked'" [class.soldout]="seat.status === 'soldout'"
+            [class.selected]="seat.status === 'selected'">
+          <ng-container *ngIf="seat.status !== '' || seat.status === undefined ">
+            <div class="hall__seat dp-f dp-f-c-sp-a">
+              <div>
+                ROW
+                <div class="hall__text">{{row}}</div>
+              </div>
+              <div>
+                SEAT
+                <div class="hall__text">{{seat.number}}</div>
+              </div>
+            </div>
+          </ng-container>
+        </th>
+      </ng-container>
+    </tr>
+  </table>
+  <table class="hall__row hall__row--right col_xs_1 col_lg_1 col_sm_1 col_md_1">
+    <tr class="hall__tr " *ngFor="let row of hall.row">
+      <th class="hall__th relative">
+        {{row}}
+      </th>
+    </tr>
+  </table>
+</div>

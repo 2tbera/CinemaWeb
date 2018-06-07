@@ -1,0 +1,121 @@
+
+.item.item--move {
+  .item {
+    &--move-holder {
+    }
+    &--move {
+      flex-direction: column;
+      position: relative;
+    }
+    &__thumbnail {
+      width: 100%;
+      height: 100%;
+    }
+    &__holder {
+      width: 270px;
+      height: 400px;
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+      }
+    }
+    &:hover > &__wrapper > .trailer_bitton.trailer {
+      animation: pulse-shadow--collection 1.5s infinite;
+    }
+    &__wrapper {
+      color: $f-c-w;
+      font: 14px 'cinema_bold';
+      width: 100%;
+      height: 50%;
+      text-align: center;
+    }
+  }
+}
+
+//asd
+.item.item--carusel {
+  @include display-flex(center,center);
+  flex-direction: column;
+  &.item--live {
+    & > .item__wrapper > .trailer_bitton.trailer {
+      //animation: pulse-shadow--collection 1.5s infinite;
+      display: none;
+    }
+    .item {
+
+      &--move {
+        flex-direction: column;
+        position: relative;
+      }
+      &__thumbnail {
+        width: 100%;
+        height: 100%;
+      }
+      &__holder {
+        display: none;
+        width: 100px;
+        height: 150px;
+        &::before {
+          content: '';
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 3;
+        }
+      }
+      &__wrapper {
+        color: $f-c-w;
+        font: 12px 'cinema_bold';
+        width: 100%;
+        height: 20%;
+        text-align: center;
+      }
+    }
+  }
+  &.item--comingSoon {
+    .item {
+      &:hover > .item__wrapper > .trailer_bitton.trailer {
+        animation: pulse-shadow--collection 1.5s infinite;
+      }
+      &--move-holder {
+      }
+      &--move {
+        flex-direction: column;
+        position: relative;
+      }
+      &__thumbnail {
+        width: 100%;
+        height: 100%;
+      }
+      &__holder {
+        width: 180px;
+        height: 260px;
+        &::before {
+          content: '';
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 3;
+        }
+      }
+      &__wrapper {
+        color: $f-c-w;
+        font: 12px 'cinema_bold';
+        width: 100%;
+        height: 50%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+//asd end

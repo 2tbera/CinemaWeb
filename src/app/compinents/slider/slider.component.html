@@ -1,0 +1,35 @@
+<div class="slider relative">
+  <div class="slider__shadow"></div>
+
+  <ng-container *ngIf="type === 'slider'">
+    <ul class="list bullet__holder dp-f dp-f-c-c">
+      <ng-container *ngFor="let slide of item ; let i = index;">
+        <li class="bullet__item btn dp-f dp-f-c-c " [class.active]="i === activeSlide" (click)="Slideactive(i)">{{i +
+          1}}
+        </li>
+      </ng-container>
+    </ul>
+  </ng-container>
+  <ng-container  *ngFor="let item of item ; let i = index;">
+    <div class="slide full" [class.active]="i === activeSlide">
+      <img class="slider__img" src="{{data.baseServer}}{{item.thumbnail}}">
+      <div class="container full">
+        <div class="row full relative">
+          <!--item-->
+          <div class="slider__attachment dp-f-s-e dp-f br-b-w">
+            <button class="btn slider__trailer trailer"></button>
+            <span class="slider__title spacer-b-40">{{item.title}}</span>
+            <span class="slider__text spacer-b-40">
+          {{item.description}}
+        </span>
+            <div class=" dp-f dp-f-c-s">
+              <span class="slider__imdb"> {{item.imdb}}</span>
+              <span class="slider__about">{{item.about}}</span>
+            </div>
+          </div>
+          <!--item END-->
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
